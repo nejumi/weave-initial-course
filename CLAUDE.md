@@ -18,9 +18,8 @@ weave-initial-course/
 │   │   └── 00_environment_setup.ipynb
 │   ├── 01_basics/                        # Part 1: Weave基礎
 │   │   ├── 01_traces_and_ops.ipynb
-│   │   ├── 02_datasets.ipynb
-│   │   ├── 03_models.ipynb
-│   │   └── 04_evaluations.ipynb
+│   │   ├── 02_assets.ipynb
+│   │   └── 03_evaluations.ipynb
 │   ├── 02_practice/                      # Part 2: Weave実践
 │   │   ├── 01_simple_agent.ipynb
 │   │   └── 02_langgraph_agent.ipynb
@@ -37,9 +36,8 @@ weave-initial-course/
 ### Part 1: Weave基礎
 
 - **01_traces_and_ops**: `@weave.op`の仕組み、ネストトレース、サンプリング。**マルチメディアトレースも含む**（テキスト・画像・音声・動画・構造化データなど各種メディアタイプのログ方法）
-- **02_datasets**: `weave.Dataset`の作成・publish・バージョン管理・pandas連携
-- **03_models**: `weave.Model`クラス、バージョニング、predictの自動トレース
-- **04_evaluations**: `weave.Evaluation`・`weave.Scorer`・built-in scorers・結果分析
+- **02_assets**: `weave.Dataset`・`weave.Model`・`weave.StringPrompt`のバージョン管理。Dataset作成・publish・pandas連携。weave.Modelクラス、バージョニング、predictの自動トレース
+- **03_evaluations**: `weave.Evaluation`・`weave.Scorer`・built-in scorers・`weave.EvaluationLogger`・結果分析
 
 ### Part 2: Weave実践
 
