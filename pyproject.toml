@@ -1,0 +1,59 @@
+[project]
+name = "weave-initial-course"
+version = "0.1.0"
+description = "W&B Weave 入門コース"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "weave>=0.51.0",
+    "wandb>=0.19.0",
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "requests>=2.32.0",
+    "httpx>=0.27.0",
+    "pandas>=2.0.0",
+    "datasets>=2.0.0",
+]
+
+[project.optional-dependencies]
+# Part 2: エージェント
+agents = [
+    "langgraph>=0.2.0",
+    "langchain-openai>=0.2.0",
+    "langchain>=0.3.0",
+]
+# Part 1: 評価フレームワーク
+eval = [
+    "ragas>=0.2.0",
+    "tiktoken",
+]
+# Part 3: ART（Python >=3.11 / GPU 必須）
+art = [
+    "openpipe-art[backend]",
+]
+# 全部入り（ART 除く）
+all = [
+    "weave-initial-course[agents,eval]",
+]
+
+[dependency-groups]
+test = [
+    "pytest>=8.0.0",
+    "nbmake>=1.5.0",
+    "jupyter>=1.0.0",
+    "nbconvert>=7.0.0",
+    "ipykernel>=6.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["notebooks"]
+addopts = "--nbmake --nbmake-timeout=300"
+
+[tool.uv]
+# uv sync でテスト依存も含めてインストール
+default-groups = ["test"]
+
+# weave は gql>=4.0.0 が必要（宣言が >=3.0.0 と緩いため明示ピン）
+constraint-dependencies = [
+    "gql[httpx]>=4.0.0",
+]

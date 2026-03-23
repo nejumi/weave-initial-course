@@ -1,0 +1,33 @@
+# 環境変数・シークレット
+.env
+*.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+dist/
+build/
+
+# uv
+.python-version
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbmake
+
+# pytest
+.pytest_cache/
+
+# ART チェックポイント・生成物
+.art/
+artifacts/
+unsloth_compiled_cache/
+wandb/
+
+# OS
+.DS_Store
+
+# Claude Code
+.claude/

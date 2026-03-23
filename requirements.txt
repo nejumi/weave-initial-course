@@ -1,0 +1,17 @@
+weave>=0.51.0
+wandb>=0.19.0
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# Part 2: Agent
+langgraph>=0.2.0
+langchain-openai>=0.2.0
+
+# Part 1: Evaluation
+ragas>=0.2.0
+langchain>=0.3.0
+tiktoken
+datasets
+
+# Part 3: ART (GPU required)
+# openpipe-art[backend]
