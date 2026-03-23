@@ -28,6 +28,8 @@ wandb/
 
 # OS
 .DS_Store
+Screenshot*.png
+Screenshot*.jpg
 
 # Claude Code
 .claude/
